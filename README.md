@@ -4,7 +4,6 @@
 - [📖 \[Vet clinic\] ](#-vet-clinic-)
   - [🛠 Built With ](#-built-with-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
@@ -29,14 +28,6 @@
 
 - **[Relational Database]**
 - **[Tables]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- This project doesn't have any demo.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
