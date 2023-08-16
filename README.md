@@ -17,10 +17,12 @@
 # 📖 [Vet clinic] <a name="about-project"></a>
 
 **[Vet Clinic]** is a database designed to store and manage information related to animals.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🛠 Built With <a name="built-with"></a>
 
 - SQL
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Features -->
 
@@ -43,6 +45,7 @@ To get a local copy up and running, follow these steps.
    ```sh
    git clone git@github.com:Alibaba2023/vet-clinic.git
    ```
+   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -51,7 +54,8 @@ To get a local copy up and running, follow these steps.
 - GitHub: [@Alibaba2023](https://github.com/Alibaba2023)
 - Twitter: [@AliBabaHu2023](https://twitter.com/AliBabaHu2023)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ali-baba-hussaini-630607267/)
-
+  
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
