@@ -14,7 +14,7 @@ VALUES ('devimon', '2017-05-12', 5, TRUE, 11);
 -- update data
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
-VALUES ('charmander', '2020-2-8', 0, FALSE, 11);
+VALUES ('charmander', '2020-2-8', 0, FALSE, -11);
 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg)
 VALUES ('plantmon', '2021-11-15', 2, TRUE, -5.7);
