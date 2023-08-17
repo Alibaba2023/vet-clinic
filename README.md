@@ -42,7 +42,8 @@
 To get a local copy up and running, follow these steps.
 
 1. **Clone the Repository:**
-   Open your terminal or command prompt and navigate to the directory where you want to store the local copy of the repository. Then, use the `git clone` command followed by the repository URL to clone it:
+   Open your terminal and navigate to your local directory.
+   Then, use the `git clone` command followed by the repository URL to clone it:
 
    ```sh
    git clone git@github.com:Alibaba2023/vet-clinic.git
