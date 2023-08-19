@@ -157,7 +157,6 @@ JOIN specializations sp ON sp.vet_id = vt.id
 JOIN animals a ON a.id = vs.id
 WHERE sp.species_id != a.species_id;
 
-
 SELECT vt.name, s.name speciality, COUNT(s.name) amount FROM vets vt
 JOIN visits vs ON vt.id = vs.vet_id
 JOIN animals a ON vs.animal_id = a.id
