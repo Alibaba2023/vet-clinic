@@ -137,25 +137,35 @@ ORDER BY vs.visit_date LIMIT 1;
 
 
 SELECT 
-	a.name animal_name,
-	a.date_of_birth animal_birth_date,
-	a.escape_attempts ,
-	a.weight_kg animal_weight,
-	vt.name vet,
-	vt.age vet_age,
-	vt.date_of_graduation,
-	vs.visit_date
+    a.name animal_name,
+    a.date_of_birth animal_birth_date,
+    a.escape_attempts,
+    a.weight_kg animal_weight,
+    vt.name vet,
+    vt.age vet_age,
+    vt.date_of_graduation,
+    vs.visit_date
 FROM animals a
-JOIN visits vs ON a.id = vs.animal_id
+JOIN (
+    SELECT
+        v1.animal_id,
+        MAX(v1.visit_date) as most_recent_visit
+    FROM visits v1
+    GROUP BY v1.animal_id
+) most_recent_visits ON a.id = most_recent_visits.animal_id
+JOIN visits vs ON a.id = vs.animal_id AND most_recent_visits.most_recent_visit = vs.visit_date
 JOIN vets vt ON vs.vet_id = vt.id
-ORDER BY vs.visit_date DESC
+ORDER BY vs.visit_date DESC;
 
 
-SELECT COUNT(*) non_specialized_visits FROM visits vs
+
+SELECT COUNT(*) non_specialized_visits
+FROM visits vs
 JOIN vets vt ON vs.vet_id = vt.id
-JOIN specializations sp ON sp.vet_id = vt.id
-JOIN animals a ON a.id = vs.id
-WHERE sp.species_id != a.species_id;
+LEFT JOIN specializations sp ON sp.vet_id = vt.id
+JOIN animals a ON a.id = vs.animal_id
+WHERE sp.species_id IS NULL OR sp.species_id != a.species_id;
+
 
 SELECT vt.name, s.name speciality, COUNT(s.name) amount FROM vets vt
 JOIN visits vs ON vt.id = vs.vet_id
