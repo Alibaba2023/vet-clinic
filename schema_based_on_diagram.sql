@@ -1,3 +1,17 @@
+-- Create table for medical histories
+CREATE TABLE medical_histories (
+    id serial PRIMARY KEY,
+    admitted_at DATE,
+    patient_id int REFERENCES patients(id),
+    status VARCHAR
+);
+
+-- Create table for patients
+CREATE TABLE patients (
+    id serial PRIMARY KEY,
+    name VARCHAR(50),
+    date_of_birth DATE
+);
 
 -- Create table for treatments
 CREATE TABLE treatments (
